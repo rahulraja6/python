@@ -19,7 +19,12 @@ for j in range(1,7):
     sum=sum+inc
     print(sum)
     inc=inc+1
+    
+#Best Solution
+from itertools import accumulate
+print(list(accumulate([1,7]*15 + list(range(2,8)))))
 
-        
-    
-    
+ 
+red=[ 1 if i%2==0 else 7 for i in range(0,30)]
+others=[ j for j in range(2,8)]
+print(list(accumulate(red+others)))
